@@ -24,7 +24,7 @@
     ".claude-plugin/marketplace.json", ".agents/plugins/marketplace.json",
     "plugins/pstack/agents/poteto-agent.md", "plugins/pstack/agents/comment-sicko.md",
     "plugins/pstack/grok-agents/poteto-agent.md", "plugins/pstack/grok-agents/comment-sicko.md", "plugins/pstack/hooks/**",
-    "plugins/pstack/skills/poteto-mode/references/**"
+    "plugins/pstack/skills/poteto-mode/references/**", "plugins/pstack/skills/poteto-mode/worker.md"
   ],
   "catalog": [
     "plugins/pstack/skills/poteto-mode/references/model-catalog.md",

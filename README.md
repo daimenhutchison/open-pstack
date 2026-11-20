@@ -1,10 +1,11 @@
 # open-pstack
 
-[![CI](https://github.com/ericlitman/open-pstack/actions/workflows/ci.yml/badge.svg)](https://github.com/ericlitman/open-pstack/actions/workflows/ci.yml)
-[![Latest release](https://img.shields.io/github/v/release/ericlitman/open-pstack)](https://github.com/ericlitman/open-pstack/releases/latest)
-[![MIT license](https://img.shields.io/github/license/ericlitman/open-pstack)](LICENSE)
+[![CI](https://github.com/daimenhutchison/open-pstack/actions/workflows/ci.yml/badge.svg)](https://github.com/daimenhutchison/open-pstack/actions/workflows/ci.yml)
+[![MIT license](https://img.shields.io/github/license/daimenhutchison/open-pstack)](LICENSE)
 
 **Open Pstack brings [Lauren Tan (@poteto)](https://x.com/poteto)'s [pstack](https://github.com/cursor/plugins/tree/main/pstack) to Claude Code, Codex and Grok, and to T3 Code running Claude Code or Codex.** Its job is to stay as close to her original work as possible while translating the parts that depend on Cursor.
+
+This fork builds on [Eric Litman's Open Pstack](https://github.com/ericlitman/open-pstack) and tracks its Cursor sync separately.
 
 Lauren built pstack from the skills she uses to ship code at Cursor. In a [55-minute interview with Denis Labelle](https://x.com/DenisLabelle/status/2091337807939706928), she says that she shipped 1,000 pull requests in one month after steadily improving how her agents work and verify their results.
 
@@ -60,10 +61,10 @@ Claude Code leaves auto-update off for third-party marketplaces, so Open Pstack 
 
 ### Codex
 
-Run these commands in your shell:
+Choose a tag from the [fork's releases](https://github.com/daimenhutchison/open-pstack/releases). Replace `RELEASE_TAG` below. If `open-pstack` already points to another source, first run `codex plugin marketplace remove open-pstack`.
 
 ```shell
-codex plugin marketplace add ericlitman/open-pstack --ref main
+codex plugin marketplace add daimenhutchison/open-pstack --ref RELEASE_TAG
 codex plugin add pstack@open-pstack
 ```
 
@@ -173,7 +174,7 @@ This repository also keeps:
 
 ## Staying close to Lauren's pstack
 
-Open Pstack 1.21.0 tracks pstack 0.15.36 at Cursor commit [`2776ddd2355d6d6c8747d3964600f28daf62f049`](https://github.com/cursor/plugins/commit/2776ddd2355d6d6c8747d3964600f28daf62f049).
+See the [current sync point](UPSTREAM.md#current-sync-point) for the Cursor version and commit this fork incorporates.
 
 The two projects have separate version numbers. The pstack version identifies Lauren's upstream content. The Open Pstack version identifies the Claude Code and Codex package built from it.
 
@@ -181,7 +182,7 @@ In this repository, “upstream” means Lauren's original pstack. Open Pstack d
 
 ## Contributing
 
-Fixes for Claude Code or Codex and help bringing over new pstack releases are welcome. Search [GitHub Issues](https://github.com/ericlitman/open-pstack/issues) before opening a new issue. For larger behavior changes, explain why the change belongs in Open Pstack instead of Lauren's original project.
+Fixes for Claude Code or Codex and help bringing over new pstack releases are welcome. Search [GitHub Issues](https://github.com/daimenhutchison/open-pstack/issues) before opening a new issue. For larger behavior changes, explain why the change belongs in Open Pstack instead of Lauren's original project.
 
 Read [UPSTREAM.md](UPSTREAM.md) before changing content brought over from Lauren's pstack. Pull requests must keep one shared skill tree for Claude Code, Codex, Grok and T3 Code and pass the repository's tests, type checks, plugin validation, and static checks.
 

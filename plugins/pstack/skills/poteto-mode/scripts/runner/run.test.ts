@@ -1307,16 +1307,16 @@ const startedPath =`));
   });
 
   it("spends one explicit deadline across preflight and model execution", async () => {
-    process.env.GROK_FAKE_PREFLIGHT_DELAY_MS = "1200";
-    process.env.GROK_FAKE_MODEL_DELAY_MS = "1200";
-    const input = { ...options("claude"), timeoutMs: 1_500 };
+    process.env.GROK_FAKE_PREFLIGHT_DELAY_MS = "1000";
+    process.env.GROK_FAKE_MODEL_DELAY_MS = "4000";
+    const input = { ...options("claude"), timeoutMs: 2_500 };
     const result = await runLane(laneOf(input));
     const recorded = receipt(input.receiptPath);
 
     expect(result.exitCode).toBe(124);
     expect(recorded.status).toBe("timed-out");
     expect(recorded.preflight.status).toBe("passed");
-    expect(recorded.elapsedMs).toBeLessThan(2_100);
+    expect(recorded.elapsedMs).toBeLessThan(3_150);
   });
 
   it("bounds a descendant-held pipe by the explicit deadline without fabricating a signal", async () => {

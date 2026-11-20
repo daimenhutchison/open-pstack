@@ -5,11 +5,13 @@ description: Spawn three parallel review subagents over the active transcript, s
 
 # Reflect
 
-Mine the current conversation for durable learnings, then route them into skill edits.
+Mine this conversation for durable learnings and route each to an edit on an existing skill.
 
 **Dispatch contract.** Resolve every configured role through [`provider-dispatch.md`](../poteto-mode/references/provider-dispatch.md). Reviewers need the parent's live MCP surface, so the default and supported portable route is `inherit-parent` (or its `auto` alias). Pass the transcript or digest plus any required evidence paths. On Codex, resolve remaining Claude tool names via [`codex-tools.md`](../poteto-mode/references/codex-tools.md).
 
 Invoke when the user says "reflect" or "/reflect". Skip when the conversation is trivial, off-topic, or already covered by an existing skill the parent followed correctly. One-offs are not learnings.
+
+Keep a finding only if it will still hold in six months, would change what a future agent does, and routes to a skill the session used. Read that skill first and drop what it already says clearly. Drop one-offs and details that drift, such as SHAs, versions and counts. A skill that should have fired gets its description tuned. What a lint, script or check could enforce goes to the backlog, not into prose.
 
 ## 1. Locate the active transcript
 

@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 from typing import NamedTuple
 
-REPO = "ericlitman/open-pstack"
+REPO = "daimenhutchison/open-pstack"
 MANIFEST = "plugins/pstack/.claude-plugin/plugin.json"
 ROOT = Path(__file__).resolve().parents[1]
 
