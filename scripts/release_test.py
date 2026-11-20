@@ -66,7 +66,7 @@ class ReleaseNotes(unittest.TestCase):
         self.assertEqual(
             notes(CHANGES, "1.6.0"),
             "First paragraph.\n\nSecond paragraph.\n\n"
-            "Full entry: [CHANGES.md, 1.6.0](https://github.com/ericlitman/open-pstack/blob/v1.6.0/CHANGES.md"
+            "Full entry: [CHANGES.md, 1.6.0](https://github.com/daimenhutchison/open-pstack/blob/v1.6.0/CHANGES.md"
             "#160-syncs-to-cursor-pstack-01517).\n",
         )
 

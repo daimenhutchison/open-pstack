@@ -104,7 +104,7 @@ No output means the tracked pstack tree has not changed. This comparison does no
 
 ## Incorporate a change
 
-1. Create or update a GitHub issue in `ericlitman/open-pstack` and branch from current `main`. Pin the upstream target commit in the issue.
+1. Create or update a GitHub issue in this fork and branch from current `main`. Pin the upstream target commit in the issue.
 2. Read each upstream pstack commit in order, and record a decision for each one in the issue as a table: adopt, adapt (name the adaptation), or exclude (give the reason). Bring over each adopted commit's intent and content, then apply only the Claude Code, Codex and T3 Code substitutions documented in `CHANGES.md` and the adaptations in this file.
 3. Run the audit and the mechanical merge from a clean checkout:
 
