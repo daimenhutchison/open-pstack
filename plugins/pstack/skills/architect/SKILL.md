@@ -5,6 +5,8 @@ description: "Sketch types, signatures, and module structure before code, then s
 
 # Architect
 
+Before writing code, trace each affected system. Sketch two shapes and compare types, signatures, module boundaries, and state ownership. Pick the shape with one owner for each piece of state and the least knowledge required of callers. For a contested design, use the **arena** skill.
+
 Sketch types, function signatures, class shapes, and module boundaries with `not implemented` bodies and pseudocode. Synthesize across multiple model perspectives, then fill in code against the chosen sketch.
 
 **Dispatch contract.** Architect's Arena uses the centralized provider routing in [`provider-dispatch.md`](../poteto-mode/references/provider-dispatch.md). Configured entries are descriptors, not native model slugs. On Codex, resolve remaining Claude tool names via [`codex-tools.md`](../poteto-mode/references/codex-tools.md).

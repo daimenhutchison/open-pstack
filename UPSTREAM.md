@@ -8,11 +8,22 @@ open-pstack tracks [Cursor's pstack](https://github.com/cursor/plugins/tree/main
 | --- | --- |
 | Repository | `https://github.com/cursor/plugins.git` |
 | Path | `pstack/` |
-| Commit | `2776ddd2355d6d6c8747d3964600f28daf62f049` |
-| Upstream version | `0.15.36` |
-| open-pstack version | `1.21.0` |
+| Commit | `0b46ec399d55f2829e88822998f53b84944837d3` |
+| Upstream version | `0.15.46` |
+| open-pstack version | `1.22.0-daimen.1` |
 
-The table above is the current Cursor sync point. Open Pstack 1.17.0 imported this 0.15.36 sync, and 1.18.0 to 1.21.0 keep it. `README-UPSTREAM.md` preserves the upstream pstack README verbatim. `CHANGES.md` and `NOTICE.md` describe the adaptations and provenance.
+Open Pstack 1.22.0-daimen.1 brings this fork forward from the 0.15.36 sync in Open Pstack 1.21.0. The fork’s first sync is tracked in [issue 1](https://github.com/daimenhutchison/open-pstack/issues/1). README-UPSTREAM.md retains the upstream README. CHANGES.md and NOTICE.md record the port and its sources.
+
+## Cursor 0.15.46 adoption
+
+| Upstream commit | Decision |
+| --- | --- |
+| [bf0c7cd](https://github.com/cursor/plugins/commit/bf0c7cd80abdbf7fe47b634978a7d1b4071f71a7) | Adopt the shorter writing and explanation guidance and the Statechart fixes. Keep the configured How lanes and the Why investigators with access to their evidence sources. |
+| [2f87c85](https://github.com/cursor/plugins/commit/2f87c854fe3e2fcda44ca86b46ede35aad3c46b7) | Adopt the worker kickoff, shorter principle text, and simpler design framing. Adapt worker instructions to the host and repository’s authorization rules. Keep the Architect, Reflect, Orchestrate, checked multi-phase plan, and guarded PR workflows already supported by the port. |
+| [e58dd04](https://github.com/cursor/plugins/commit/e58dd043600587dbaf58ba315e7f2b38373eeb43) and [dd24b67](https://github.com/cursor/plugins/commit/dd24b6707267cd89c6621c4efc6fa91a1d0666ec) | Leave the Cursor Gemini panel slugs and effort defaults in Cursor. The port resolves models and efforts from its own catalog and role sheets. |
+| [0b46ec3](https://github.com/cursor/plugins/commit/0b46ec399d55f2829e88822998f53b84944837d3) | Adopt the Statechart Windows launcher, child cleanup, Java encoding, and CRLF handling. Keep the upstream Statechart corpus, Cursor manifests, and Cursor guide and automations outside the port. |
+
+The fork adds GPT-6.2 Sol and Astra as optional Codex models by incorporating [Open Pstack PR 302](https://github.com/ericlitman/open-pstack/pull/302). It keeps the existing role defaults.
 
 ## Upstream-only exclusions
 
@@ -85,8 +96,8 @@ Fetch and inspect only commits that touched pstack after the recorded sync point
 
 ```shell
 git fetch cursor main
-git log --oneline 2776ddd2355d6d6c8747d3964600f28daf62f049..cursor/main -- pstack
-git diff --stat 2776ddd2355d6d6c8747d3964600f28daf62f049..cursor/main -- pstack
+git log --oneline 0b46ec399d55f2829e88822998f53b84944837d3..cursor/main -- pstack
+git diff --stat 0b46ec399d55f2829e88822998f53b84944837d3..cursor/main -- pstack
 ```
 
 No output means the tracked pstack tree has not changed. This comparison does not need a polling service or generated mirror branch.
